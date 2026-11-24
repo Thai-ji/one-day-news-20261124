@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -9,32 +9,34 @@
   body {
     font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     background:#f6f1e6; color:#15130f;
-    padding:14px 20px 12px;
+    padding:13px 20px 12px;
     display:flex; flex-direction:column;
     -webkit-font-smoothing:antialiased;
   }
   .mast { display:flex; align-items:flex-end; justify-content:space-between; border-bottom:6px solid #15130f; padding-bottom:8px; }
-  .mast .logo { font-size:64px; line-height:0.84; font-weight:800; letter-spacing:-2px; }
+  .mast .logo { font-size:60px; line-height:0.84; font-weight:800; letter-spacing:-2px; }
   .mast .logo em { font-style:normal; color:#b4301f; }
-  .mast .sub { font-size:13px; color:#4a443a; max-width:320px; line-height:1.28; margin-bottom:4px; }
+  .mast .sub { font-size:13px; color:#4a443a; max-width:350px; line-height:1.26; margin-bottom:3px; }
   .mast .when { text-align:right; }
   .mast .when b { display:block; font-size:23px; font-weight:800; letter-spacing:0.2px; white-space:nowrap; }
   .mast .when span { display:block; font-size:12.5px; color:#5c554a; letter-spacing:1.8px; margin-top:3px; }
 
-  .leads { display:flex; gap:11px; margin-top:13px; }
-  .lead { flex:1; background:#fbf8f1; border:2px solid #15130f; padding:10px 11px 11px; display:flex; flex-direction:column; }
+  .leads { display:flex; gap:11px; margin-top:12px; }
+  .lead { flex:1; background:#fbf8f1; border:2px solid #15130f; padding:9px 10px 10px; display:flex; flex-direction:column; }
   .lead.alt { background:#fdf3e4; }
-  .lead .icon { height:34px; margin-bottom:7px; }
-  .lead .icon svg { height:34px; width:auto; display:block; }
+  .lead .icon { height:32px; margin-bottom:6px; }
+  .lead .icon svg { height:32px; width:auto; display:block; }
   .lead h2 { font-size:27px; line-height:1.04; font-weight:800; letter-spacing:-0.3px; }
-  .lead p { font-size:13.5px; line-height:1.26; color:#3a352c; margin-top:6px; }
+  .lead p { font-size:13px; line-height:1.24; color:#3a352c; margin-top:6px; }
   .lead .tag { font-size:11.5px; font-weight:800; letter-spacing:1.6px; color:#b4301f; margin-bottom:5px; }
 
-  .band { display:flex; margin-top:13px; height:52px; border:2px solid #15130f; }
+  .band { display:flex; margin-top:12px; height:52px; border:2px solid #15130f; }
   .seg { display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:3px solid #15130f; color:#fff; }
   .seg:last-child { border-right:none; }
   .seg b { font-size:21px; font-weight:800; letter-spacing:0.5px; line-height:1; }
   .seg i { font-style:normal; font-size:16px; font-weight:700; opacity:0.92; margin-top:3px; line-height:1; }
+  .seg.narrow { min-width:28px; }
+  .seg.narrow b { font-size:19px; letter-spacing:0; }
   .s-eu { background:#1f5b8c; }
   .s-me { background:#a8452a; }
   .s-am { background:#2f6b46; }
@@ -43,22 +45,23 @@
   .s-oc { background:#2a7370; }
   .s-wd { background:#40403c; }
 
-  .nums { display:flex; margin-top:13px; border-top:5px solid #15130f; border-bottom:3px solid #15130f; padding:10px 0; }
-  .num { flex:1; padding:0 10px; border-right:2px solid #cdc5b4; }
-  .num:last-child { border-right:none; }
-  .num b { display:block; font-size:36px; font-weight:800; letter-spacing:-0.8px; line-height:1; }
-  .num span { display:block; font-size:12.5px; line-height:1.22; color:#3d382f; margin-top:5px; }
+  .nums { display:grid; grid-template-columns:repeat(3, 1fr); margin-top:12px; border-top:5px solid #15130f; border-bottom:3px solid #15130f; }
+  .num { padding:9px 12px 8px; border-right:2px solid #cdc5b4; }
+  .num:nth-child(3n) { border-right:none; }
+  .num:nth-child(n+4) { border-top:2px solid #cdc5b4; }
+  .num b { display:block; font-size:42px; font-weight:800; letter-spacing:-1px; line-height:1; }
+  .num span { display:block; font-size:12px; line-height:1.2; color:#3d382f; margin-top:5px; }
 
-  .cards { display:grid; grid-template-columns:repeat(5, 1fr); gap:9px; margin-top:13px; }
-  .card { background:#fbf8f1; border:1.5px solid #15130f; padding:8px 8px; display:flex; gap:6px; align-items:flex-start; }
-  .card svg { width:25px; height:25px; flex:0 0 25px; margin-top:1px; }
-  .card h3 { font-size:14px; line-height:1.18; font-weight:700; }
+  .cards { display:grid; grid-template-columns:repeat(5, 1fr); gap:9px; margin-top:12px; }
+  .card { background:#fbf8f1; border:1.5px solid #15130f; padding:7px 8px; display:flex; gap:6px; align-items:flex-start; }
+  .card svg { width:24px; height:24px; flex:0 0 24px; margin-top:1px; }
+  .card h3 { font-size:14px; line-height:1.16; font-weight:700; }
   .card .r { font-size:11px; font-weight:800; letter-spacing:1px; color:#8a8172; display:block; margin-bottom:2px; }
 
-  .briefs { display:grid; grid-template-columns:repeat(3, 1fr); gap:0 16px; margin-top:13px; border-top:2px solid #15130f; padding-top:9px; }
+  .briefs { display:grid; grid-template-columns:repeat(3, 1fr); gap:0 16px; margin-top:12px; border-top:2px solid #15130f; padding-top:9px; }
   .briefs ul { list-style:none; }
-  .briefs li { font-size:13px; line-height:1.22; padding-left:12px; position:relative; margin-bottom:6px; }
-  .briefs li::before { content:""; position:absolute; left:0; top:5px; width:5px; height:5px; background:#b4301f; }
+  .briefs li { font-size:14px; line-height:1.2; padding-left:12px; position:relative; margin-bottom:7px; }
+  .briefs li::before { content:""; position:absolute; left:0; top:6px; width:5px; height:5px; background:#b4301f; }
 
   footer { margin-top:auto; border-top:2px solid #15130f; padding-top:7px; font-size:11.5px; color:#5c554a; display:flex; justify-content:space-between; }
 </style>
@@ -67,7 +70,7 @@
 
 <header class="mast">
   <div class="logo">THE<em>DAY</em></div>
-  <div class="sub">One page from around the world: the events of a single day, drawn by region, counted by cost.</div>
+  <div class="sub">One page from around the world: 80 stories tracked today, drawn by region, counted by cost.</div>
   <div class="when"><b>TUESDAY 24 NOVEMBER 2026</b><span>WORLD NEWS DIGEST</span></div>
 </header>
 
@@ -93,13 +96,13 @@
 </section>
 
 <section class="band">
-  <div class="seg s-eu" style="flex:7"><b>EU</b><i>7</i></div>
-  <div class="seg s-me" style="flex:5"><b>ME</b><i>5</i></div>
-  <div class="seg s-am" style="flex:6"><b>AM</b><i>6</i></div>
-  <div class="seg s-as" style="flex:2"><b>AS</b><i>2</i></div>
-  <div class="seg s-af" style="flex:3"><b>AF</b><i>3</i></div>
-  <div class="seg s-oc" style="flex:1"><b>OC</b><i>1</i></div>
-  <div class="seg s-wd" style="flex:1"><b>WD</b><i>1</i></div>
+  <div class="seg s-eu" style="flex:14"><b>EU</b><i>14</i></div>
+  <div class="seg s-me" style="flex:11"><b>ME</b><i>11</i></div>
+  <div class="seg s-am" style="flex:13"><b>AM</b><i>13</i></div>
+  <div class="seg s-as" style="flex:20"><b>AS</b><i>20</i></div>
+  <div class="seg s-af" style="flex:12"><b>AF</b><i>12</i></div>
+  <div class="seg s-oc narrow" style="flex:3"><b>OC</b><i>3</i></div>
+  <div class="seg s-wd" style="flex:7"><b>WD</b><i>7</i></div>
 </section>
 
 <section class="nums">
@@ -129,19 +132,16 @@
     <li>COP31 closes in Türkiye without the agreement it was meant to reach.</li>
     <li>Germany: bomb threats close hundreds of schools; police see no concrete danger.</li>
     <li>UK: two men held after masked intruders entered William and Kate's Anmer Hall home.</li>
-    <li>France's highest court definitively upholds Éric Zemmour's conviction.</li>
   </ul>
   <ul>
     <li>Iraq's PM orders Baghdad to take Kurdish border crossings and some northern oil fields.</li>
     <li>Gaza: Israeli strikes kill seven, including a senior Hamas security official.</li>
     <li>Iran's rial slides to 283,200 to the dollar as a truckers' strike reaches a third day.</li>
-    <li>Nigeria: four killed at a Senate candidate's campaign event; curfew imposed.</li>
   </ul>
   <ul>
     <li>Taiwan: 19.6 million eligible voters for Saturday's local elections.</li>
     <li>Mexico: 16 suspects killed in a Sinaloa clash after a kingpin's capture.</li>
-    <li>Venezuela: 315 injured in border unrest with Colombia.</li>
-    <li>A Dutch court bars EU sales of BYD's Ti7 SUV over copied design.</li>
+    <li>Nigeria: four killed at a Senate candidate's campaign event; curfew imposed.</li>
   </ul>
 </section>
 
