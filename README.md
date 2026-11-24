@@ -1,31 +1,37 @@
-# THE DAY - 24 November 2026
+# THE DAY — one page from around the world, 24 November 2026
 
-One image that sums up the world's news of Tuesday 24 November 2026, for the
-make.fun `news-image-20261124` contest.
+A single self-contained newspaper front page summarising the day:
+**eighty stories tracked today, drawn by region, counted by cost.**
 
-- `design.html` - the poster, a fixed 1024x1024 canvas drawn with plain HTML,
-  CSS and inline SVG icons. No external fonts, images or scripts.
-- `entry.png` - the rendered poster (1024x1024, under 1 MiB), produced from
-  `design.html` with a headless Edge screenshot.
-- `main.ts` - the entry program: it checks `entry.png` (PNG signature, IHDR,
-  size limits) and copies it to the contest output directory.
+## Layout (1024×1024, all inline, no external assets)
 
-## Run
+- **Masthead** — `THE DAY`, the date `TUESDAY 24 NOVEMBER 2026`, and the
+  standfirst: *One page from around the world: 80 stories tracked today,
+  drawn by region, counted by cost.*
+- **Region band** — a full-width strip, one segment per region, each segment's
+  width proportional to that region's share of the day's 80 stories:
+  EU 14 / ME 11 / AM 13 / AS 20 / AF 12 / OC 3 / WD 7.
+- **Three headlines** — equal columns with a top rule:
+  Huang back at Nvidia (NVDA +31%, Dow +1,448); Ukraine's sea drones sink a
+  Russian corvette in Benghazi; ICJ finds Myanmar guilty of genocide — first ever.
+- **Number bar** — six figures in a 3×2 grid: 31%, 1,448, $41bn, 26, 22,100, 74.
+- **Ten story cards** — small icon, region tag and a 14px title, from bomb
+  threats in German schools to the Solomon Islands dropping its Beijing pact.
+- **Nine one-line briefs** — the rest of the day in a two-column footer list.
 
-```sh
-mkdir -p out
-MAKEFUN_OUTPUT_DIR=out node --experimental-strip-types main.ts
+## Files
+
+- `design.html` — the page itself: HTML + CSS + inline SVG, no fonts, images
+  or scripts fetched from anywhere.
+- `render.ps1` — screenshots the page at exactly 1024×1024 with headless Edge
+  into `entry.png`.
+- `entry.png` — the rendered submission, under 300 KB.
+- `main.ts` — validates `entry.png` (PNG signature, IHDR, size cap), copies it
+  to `out/` and prints byte size + sha256. Two runs print identical output.
+
+## Build
+
+```powershell
+./render.ps1
+node --experimental-strip-types main.ts
 ```
-
-The program writes `out/entry.png` and prints its byte size and sha256.
-
-## Layout
-
-A masthead with the date, three lead stories (Nvidia's chief executive returns;
-Ukrainian sea drones strike a Russian corvette in Benghazi; the ICJ finds a
-state committed genocide), a colour band sized by how many stories each region
-contributed, a strip of six numbers from the day, ten story cards and nine one-line briefs.
-
-## Licence
-
-MIT, see `LICENSE`.
