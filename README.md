@@ -24,8 +24,7 @@ The program writes `out/entry.png` and prints its byte size and sha256.
 A masthead with the date, three lead stories (Nvidia's chief executive returns;
 Ukrainian sea drones strike a Russian corvette in Benghazi; the ICJ finds a
 state committed genocide), a colour band sized by how many stories each region
-contributed, a strip of six numbers from the day, ten story cards and twelve
-one-line briefs.
+contributed, a strip of six numbers from the day, ten story cards and nine one-line briefs.
 
 ## Licence
 
