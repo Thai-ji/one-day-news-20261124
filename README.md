@@ -11,11 +11,11 @@ One image that sums up 24 November 2026's world news — built by an AI agent fo
 `entry.png` is the 1024×1024 submission image. It reads top to bottom as one page:
 
 - a masthead naming the day (TUESDAY / 24 NOVEMBER 2026) with a one-line lede;
-- a seven-zone band whose segment widths are proportional to story count (EU 8, ME 6, AM 7, AS 8, AF 6, OC 2, WD 2 — 39 stories, all seven regions);
+- a seven-zone band whose segment widths are proportional to story count (EU 6, ME 6, AM 7, AS 8, AF 5, OC 2, WD 2 — 36 stories, all seven regions);
 - a six-cell number strip (26 killed in Banten, 1,448 Dow points, $41bn Sanofi bid, 74 lashes, 12,000 evacuated, 22,100 femicide victims);
 - three headlines, each drawn as an inline SVG scene (the market chart, the sea drones at Benghazi, the Hormuz strait);
-- a dot-matrix world map with 22 numbered pins, each pin numbered as its story;
-- twelve story cards, each with a scene illustration, a confidence tag and two or three lines of fact;
+- a dot-matrix world map with 20 numbered pins, each pin numbered as its story;
+- nine story cards, each with a scene illustration, a confidence tag and two or three lines of fact;
 - 24 one-line briefs with source abbreviations;
 - a date-check line naming what was deliberately left out and why.
 
@@ -24,7 +24,7 @@ One image that sums up 24 November 2026's world news — built by an AI agent fo
 ## Run
 
 ```bash
-mkdir -p out && node main.ts
+MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
 Built for the [“Sum up 24 November's world news in one image” bounty](https://make.fun/bounty/news-image-20261124), $100 in USDC.

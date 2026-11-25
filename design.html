@@ -14,13 +14,14 @@
   --line:#c9bea7;
   --accent:#b33a22;
   --accent-dark:#8d2b18;
+  --sand:#d3bd91;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;background:var(--paper);}
 body{width:1024px;height:1024px;overflow:hidden;color:var(--ink);font-family:Georgia,"Times New Roman",serif;-webkit-font-smoothing:antialiased;}
 .page{
   position:relative;width:1024px;height:1024px;padding:10px 18px 8px;
-  display:grid;grid-template-rows:72px 52px 42px 188px 122px 296px 1fr 18px 12px;gap:4px;
+  display:grid;grid-template-rows:72px 52px 42px 194px 122px 296px 1fr 18px 12px;gap:4px;
   background:var(--paper);
 }
 .page::before{
@@ -67,9 +68,9 @@ body{width:1024px;height:1024px;overflow:hidden;color:var(--ink);font-family:Geo
 .headline:last-child{padding-right:0;}
 .headline+.headline{border-left:1px solid var(--line);}
 .hk{font:700 7.3px/1.1 Arial,sans-serif;letter-spacing:.9px;color:var(--accent);text-transform:uppercase;margin:1px 0 2px;white-space:nowrap;overflow:hidden;}
-.illo{height:78px;border:1px solid var(--line);background:linear-gradient(180deg,#fbf7ec,#efe6d4);margin-bottom:3px;overflow:hidden;flex:none;}
+.illo{height:64px;border:1px solid var(--line);background:linear-gradient(180deg,#fbf7ec,#efe6d4);margin-bottom:3px;overflow:hidden;flex:none;}
 .illo svg{width:100%;height:100%;display:block;}
-.headline h2{font:700 16.6px/16.6px Georgia,serif;margin:0 0 2px;letter-spacing:-.35px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.headline h2{font:700 22px/21.5px Georgia,serif;margin:0 0 2px;letter-spacing:-.65px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .headline p{font:11px/12.1px Georgia,serif;color:var(--ink2);margin:0;flex:1;overflow:hidden;}
 
 /* ---------- map ---------- */
@@ -78,23 +79,23 @@ body{width:1024px;height:1024px;overflow:hidden;color:var(--ink);font-family:Geo
 .maphead{position:absolute;left:0;top:0;z-index:3;background:var(--paper);padding:0 6px 2px 0;font:700 8px/1 Arial,sans-serif;letter-spacing:1.2px;}
 .maphead span{color:var(--muted);font-weight:400;margin-left:6px;letter-spacing:.45px;}
 #worldmap{width:100%;height:114px;display:block;}
-#worldmap .dot{fill:var(--ink);opacity:.36;}
+#worldmap .dot{fill:var(--ink);opacity:.55;}
 #worldmap .pin circle{fill:var(--accent);stroke:var(--paper);stroke-width:1.1;}
 #worldmap .pin.pale circle{fill:var(--ink);}
 #worldmap .pin text{fill:#fff;font:700 6.4px Arial,sans-serif;text-anchor:middle;dominant-baseline:central;}
 #worldmap .pin.two text{font-size:5.6px;}
-.pinindex{border-left:1px solid var(--line);padding-left:8px;font:8.6px/1.12 Arial,sans-serif;color:var(--ink2);}
-.pinindex h4{font:700 7.6px/1 Arial,sans-serif;letter-spacing:1.1px;margin:1px 0 4px;color:var(--ink);}
-.pinindex .pi{display:flex;gap:5px;align-items:center;margin-bottom:1.6px;}
+.pinindex{border-left:1px solid var(--line);padding-left:8px;font:8.2px/1.1 Arial,sans-serif;color:var(--ink2);}
+.pinindex h4{font:700 7.4px/1 Arial,sans-serif;letter-spacing:1.1px;margin:0 0 3px;color:var(--ink);}
+.pinindex .pi{display:flex;gap:5px;align-items:center;margin-bottom:1.1px;}
 .pinindex .pi b{background:var(--accent);color:#fff;width:15px;height:11px;display:inline-flex;align-items:center;justify-content:center;font-size:6.4px;flex:none;letter-spacing:.2px;}
 .pinindex .pi i{font-style:normal;color:var(--muted);font-size:7.2px;}
 
 /* ---------- cards ---------- */
 .cards{display:flex;flex-direction:column;}
-.card-grid{flex:1;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);gap:5px;}
-.card{border-top:2px solid var(--ink);padding:4px 5px;display:flex;gap:6px;min-height:0;position:relative;background:rgba(255,255,255,.13);overflow:hidden;}
+.card-grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:5px;}
+.card{border-top:2px solid var(--ink);padding:4px 6px;display:flex;gap:7px;min-height:0;position:relative;background:rgba(255,255,255,.13);overflow:hidden;}
 .card::after{content:"";position:absolute;left:0;bottom:0;width:14px;height:2px;background:var(--accent);}
-.cardillus{width:52px;height:56px;border:1px solid var(--line);background:#fbf6ea;flex:none;overflow:hidden;margin-top:1px;}
+.cardillus{width:58px;height:64px;border:1px solid var(--line);background:#fbf6ea;flex:none;overflow:hidden;margin-top:1px;}
 .cardillus svg{width:100%;height:100%;display:block;}
 .cardbody{flex:1;min-width:0;display:flex;flex-direction:column;}
 .cardmeta{display:flex;justify-content:space-between;align-items:center;height:9px;flex:none;}
@@ -102,7 +103,7 @@ body{width:1024px;height:1024px;overflow:hidden;color:var(--ink);font-family:Geo
 .tag{font:700 6.2px/1 Arial,sans-serif;letter-spacing:.45px;padding:1.5px 3px 1px;border:1px solid var(--accent);color:var(--accent);text-transform:uppercase;white-space:nowrap;}
 .tag.confirmed{background:var(--ink);border-color:var(--ink);color:var(--paper);}
 .tag.ongoing{background:var(--accent);border-color:var(--accent);color:#fff;}
-.card h3{font:700 15px/15.4px Georgia,serif;margin:1px 0 1px;letter-spacing:-.3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex:none;}
+.card h3{font:700 17px/17.4px Georgia,serif;margin:1px 0 1px;letter-spacing:-.4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex:none;}
 .card p{font:11px/11.7px Georgia,serif;color:var(--ink2);margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1;min-height:0;}
 
 /* ---------- briefs ---------- */
@@ -122,6 +123,9 @@ svg .s{fill:none;stroke:var(--ink);stroke-width:1.35;stroke-linecap:round;stroke
 svg .s2{fill:none;stroke:var(--ink);stroke-width:.8;stroke-linecap:round;stroke-linejoin:round;opacity:.48;}
 svg .f{fill:var(--accent);opacity:.2;stroke:none;}
 svg .fa{fill:var(--accent);stroke:none;}
+svg .fb{fill:var(--sand);stroke:none;}
+svg .fi{fill:var(--ink);stroke:none;}
+svg .fr{fill:var(--accent);stroke:none;}
 svg .w{fill:var(--paper);stroke:none;}
 svg .t{font-family:Arial,sans-serif;font-size:5.6px;fill:var(--ink2);letter-spacing:.5px;}
 svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--accent);letter-spacing:.3px;}
@@ -133,7 +137,7 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
   <!-- ================= MASTHEAD ================= -->
   <header class="masthead">
     <div class="brand">
-      <div class="kicker">Global edition · 39 stories tracked · 7 regions</div>
+      <div class="kicker">Global edition · 36 stories tracked · 7 regions</div>
       <h1>THE GLOBAL DAY</h1>
     </div>
     <div class="lead">Nvidia jumps 31%, Ukraine's sea drones reach Libya, and COP31 ends without a deal.</div>
@@ -146,11 +150,11 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
 
   <!-- ================= REGION BAND ================= -->
   <div class="zoneband" aria-label="Stories by region">
-    <div class="zone" style="flex:8 1 0"><b>EU</b><span>8</span><i>EUROPE</i></div>
+    <div class="zone" style="flex:6 1 0"><b>EU</b><span>6</span><i>EUROPE</i></div>
     <div class="zone" style="flex:6 1 0"><b>ME</b><span>6</span><i>MIDDLE EAST</i></div>
     <div class="zone" style="flex:7 1 0"><b>AM</b><span>7</span><i>AMERICAS</i></div>
     <div class="zone" style="flex:8 1 0"><b>AS</b><span>8</span><i>ASIA</i></div>
-    <div class="zone" style="flex:6 1 0"><b>AF</b><span>6</span><i>AFRICA</i></div>
+    <div class="zone" style="flex:5 1 0"><b>AF</b><span>5</span><i>AFRICA</i></div>
     <div class="zone" style="flex:2 1 0"><b>OC</b><span>2</span><i>OCEANIA</i></div>
     <div class="zone" style="flex:2 1 0"><b>WD</b><span>2</span><i>WORLD</i></div>
   </div>
@@ -174,17 +178,19 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
         <div class="hk">Americas · Markets · Story 01 · theworld</div>
         <div class="illo">
           <svg viewBox="0 0 300 88" aria-hidden="true">
+            <rect x="0" y="64" width="300" height="24" class="fb"/>
+            <g class="fi">
+              <rect x="18" y="47" width="11" height="29"/>
+              <rect x="33" y="39" width="13" height="37"/>
+              <rect x="50" y="51" width="9" height="25"/>
+              <rect x="63" y="32" width="15" height="44"/>
+              <rect x="82" y="43" width="11" height="33"/>
+            </g>
+            <rect x="97" y="36" width="15" height="40" class="fr"/>
             <g class="s2">
               <path d="M8 76H292"/>
-              <rect x="18" y="58" width="11" height="18"/>
-              <rect x="33" y="49" width="13" height="27"/>
-              <rect x="50" y="61" width="9" height="15"/>
-              <rect x="63" y="43" width="15" height="33"/>
-              <rect x="82" y="53" width="11" height="23"/>
-              <rect x="97" y="47" width="13" height="29"/>
             </g>
-            <path class="f" d="M10 69l23-6 17 4 22-11 20 5 24-14 21 4 26-10 24 3 30-14 21 3V76H10z"/>
-            <path d="M10 69l23-6 17 4 22-11 20 5 24-14 21 4 26-10 24 3 30-14 21 3" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 69l23-6 17 4 22-11 20 5 24-14 21 4 26-10 24 3 30-14 21 3" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
             <path class="s" d="M257 19l18-6-3 18" stroke="var(--accent)" stroke-width="2"/>
             <text x="215" y="14" class="ta">+31%</text>
             <text x="10" y="12" class="t">NASDAQ · DOW · S&amp;P 500</text>
@@ -202,14 +208,16 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
               <path d="M0 78c15-4 25 4 40 0s25 4 40 0 25 4 40 0 25 4 40 0 25 4 40 0 25 4 40 0 25 4 40 0"/>
               <path d="M0 84c15-4 25 4 40 0s25 4 40 0 25 4 40 0 25 4 40 0 25 4 40 0 25 4 40 0 25 4 40 0"/>
             </g>
-            <path class="f" d="M190 30l12-13 10 9 13-12 11 16z"/>
+            <rect x="0" y="69" width="300" height="19" class="fb"/>
+            <path class="fr" d="M190 30l12-13 10 9 13-12 11 16z"/>
             <path class="s" d="M198 34l3-15m0 0l-4 5m4-5l4 5"/>
+            <path class="fb" d="M150 54h128l-12 20h-104z"/>
             <path class="s" d="M150 54h128l-12 20h-104z"/>
             <path class="s" d="M190 54v-11h36v11"/>
             <path class="s" d="M198 43v-8h10v8"/>
             <path class="s" d="M236 54V37h7v17"/>
             <path class="s" d="M252 37v-9m0 0l-8 3m8-3l8 3"/>
-            <path class="s" d="M18 68h46l-5 10H23z"/>
+            <path class="fr" d="M18 68h46l-5 10H23z"/>
             <path class="s" d="M31 68V56h5v12"/>
             <path class="s" d="M38 55v-9m0 0l-6 3m6-3l-1 7"/>
             <path class="s2" stroke-dasharray="3 3" d="M49 59c34-13 68-13 98-9"/>
@@ -227,16 +235,17 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
         <div class="hk">Middle East · Hormuz · Story 03 · WW</div>
         <div class="illo">
           <svg viewBox="0 0 300 88" aria-hidden="true">
-            <path class="f" d="M0 0h78c11 17 21 29 28 43 7 12 2 23-9 31H0z"/>
-            <path class="f" d="M300 0h-70c-9 17-19 29-26 43-7 12-2 23 9 31h87z"/>
+            <path class="fb" d="M0 0h78c11 17 21 29 28 43 7 12 2 23-9 31H0z"/>
+            <path class="fb" d="M300 0h-70c-9 17-19 29-26 43-7 12-2 23 9 31h87z"/>
             <g class="s">
               <path d="M0 9h70c12 16 18 25 22 33 5 10 1 20-7 26H0"/>
               <path d="M300 9h-68c-10 16-17 25-21 33-5 10-1 20 7 26h82"/>
             </g>
+            <path class="fr" d="M110 51h74l-8 13h-58z"/>
             <path class="s" d="M110 51h74l-8 13h-58z"/>
             <path class="s" d="M133 51v-8h20v8"/>
             <path class="s" d="M157 43v-6h8v6"/>
-            <circle cx="149" cy="71" r="6" class="s"/>
+            <circle cx="149" cy="71" r="6" class="fi"/>
             <path class="s" d="M149 61v-4m0 18v4m-10-9h-4m20 0h4m-17-7l-3-3m14 14l3 3m-14 0l-3 3m14-14l3-3"/>
             <path class="s2" stroke-dasharray="4 3" d="M20 72c40-4 70-6 92-4m78 0c33 2 58 4 88 2"/>
             <text x="97" y="15" class="t">STRAIT OF HORMUZ</text>
@@ -253,30 +262,32 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
   <!-- ================= MAP ================= -->
   <section class="mapsec">
     <div class="mapwrap">
-      <div class="maphead">WHERE IT HAPPENED <span>22 PINNED DATELINES · PIN NO. = STORY NO.</span></div>
+      <div class="maphead">WHERE IT HAPPENED <span>20 PINNED DATELINES · PIN NO. = STORY NO.</span></div>
       <svg id="worldmap" viewBox="0 0 640 114" preserveAspectRatio="xMidYMid meet" aria-label="Dot-matrix world map with numbered story pins"></svg>
     </div>
     <aside class="pinindex">
-      <h4>PIN INDEX · 8 OF 22</h4>
+      <h4>PIN INDEX · 8 OF 20</h4>
       <div class="pi"><b>01</b><span>Washington — Nvidia's 31% day</span></div>
       <div class="pi"><b>02</b><span>Benghazi — drones sink a corvette</span></div>
       <div class="pi"><b>03</b><span>Hormuz — a fourth tanker hit</span></div>
       <div class="pi"><b>04</b><span>Manchester — 12,000 evacuated</span></div>
-      <div class="pi"><b>09</b><span>Villavicencio — car bomb, 25 hurt</span></div>
-      <div class="pi"><b>10</b><span>Banten — 26 dead in factory fire</span></div>
-      <div class="pi"><b>14</b><span>Honiara — China pact dropped</span></div>
-      <div class="pi"><b>39</b><span>Türkiye — COP31 ends in silence</span></div>
+      <div class="pi"><b>07</b><span>Villavicencio — car bomb, 25 hurt</span></div>
+      <div class="pi"><b>08</b><span>Banten — 26 dead in factory fire</span></div>
+      <div class="pi"><b>11</b><span>Honiara — China pact dropped</span></div>
+      <div class="pi"><b>36</b><span>Türkiye — COP31 ends in silence</span></div>
     </aside>
   </section>
 
   <!-- ================= CARDS ================= -->
   <section class="cards">
-    <div class="section-head"><span>Twelve stories that mattered</span><span>2–3 lines each · tagged by confidence</span></div>
+    <div class="section-head"><span>Nine stories that mattered</span><span>2–3 lines each · tagged by confidence</span></div>
     <div class="card-grid">
 
       <article class="card">
         <div class="cardillus">
           <svg viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="0" y="78" width="96" height="18" class="fb"/>
+            <rect x="8" y="17" width="80" height="7" class="fi"/>
             <path class="s" d="M8 21h80M12 21v22m72-22v22M12 43h72"/>
             <path class="s2" d="M8 21l8-10m8 10l8-10m8 10l8-10m8 10l8-10m8 10l8-10m8 10l8-10m8 10l8-10"/>
             <g fill="var(--ink)">
@@ -299,45 +310,8 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
       <article class="card">
         <div class="cardillus">
           <svg viewBox="0 0 96 96" aria-hidden="true">
-            <rect x="16" y="34" width="58" height="24" rx="12" transform="rotate(-32 45 46)" class="f"/>
-            <rect x="16" y="34" width="58" height="24" rx="12" transform="rotate(-32 45 46)" class="s"/>
-            <path class="s" d="M36 35l20 12" transform="rotate(-32 45 46)"/>
-            <path class="s" d="M65 17c0 6-5 9-8 10m8-10c0 6 5 9 8 10m-8-10v18"/>
-            <path class="s" d="M20 76l14-8 10 4 22-16"/>
-            <path class="s" d="M60 54l8-2-1 8"/>
-            <text x="19" y="26" class="ta">$41BN</text>
-          </svg>
-        </div>
-        <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 05 · EUROPE · WW</span><span class="tag confirmed">CONFIRMED</span></div>
-          <h3>SANOFI'S $41BN CASH BET</h3>
-          <p>Sanofi agreed an all-cash takeover of US biopharma Insmed.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="cardillus">
-          <svg viewBox="0 0 96 96" aria-hidden="true">
-            <path class="s" d="M48 8c6 9 8 19 8 31v27H40V39c0-12 2-22 8-31z"/>
-            <circle cx="48" cy="31" r="5" class="s"/>
-            <path class="f" d="M40 66l-8 15 8-3 8 3-8-15z"/>
-            <path class="s" d="M39 69l-7 11m26-11l7 11"/>
-            <path class="s" d="M24 78l-6 6m54-6l6 6"/>
-            <rect x="12" y="15" width="8" height="6" class="s"/><path class="s" d="M16 15v-3m0 6v3"/>
-            <rect x="78" y="22" width="8" height="6" class="s"/><path class="s" d="M82 22v-3m0 6v3"/>
-            <path class="s2" stroke-dasharray="2 2" d="M20 20c10 6 18 10 24 12m10 0c10 3 18 6 24 8"/>
-          </svg>
-        </div>
-        <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 06 · EUROPE · WW</span><span class="tag confirmed">CONFIRMED</span></div>
-          <h3>ARIANE 6 LOFTS 36 SATELLITES</h3>
-          <p>Ariane 6 launched 36 Amazon satellites from French Guiana at about 11:15 UK time.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="cardillus">
-          <svg viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="0" y="78" width="96" height="18" class="fb"/>
+            <rect x="6" y="8" width="84" height="9" class="fi"/>
             <path class="s" d="M10 14v72m12-72v72m12-72v72m12-72v72m12-72v72m12-72v72"/>
             <path class="s" d="M18 66h60"/>
             <rect x="54" y="28" width="22" height="24" rx="10" class="f"/>
@@ -349,7 +323,7 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
           </svg>
         </div>
         <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 07 · MIDDLE EAST · WW</span><span class="tag">REPORTED</span></div>
+          <div class="cardmeta"><span class="cardnum">STORY 05 · MIDDLE EAST · WW</span><span class="tag">REPORTED</span></div>
           <h3>74 LASHES FOR A SONG</h3>
           <p>Singer Parastoo Ahmadi was flogged 74 times in Qom for performing without a hijab.</p>
         </div>
@@ -358,17 +332,18 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
       <article class="card">
         <div class="cardillus">
           <svg viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="0" y="74" width="96" height="22" class="fb"/>
             <path class="s" d="M8 54h80M8 62h80"/>
             <path class="s" d="M8 54v8m14-8v8m14-8v8m14-8v8m14-8v8m14-8v8"/>
             <circle cx="46" cy="44" r="10" class="s"/>
             <path class="s" d="M46 34v-5m0 25v5m-10-15h-5m20 0h5m-17-7l-4-4m14 14l4 4m-14 0l-4 4m14-14l4-4"/>
             <path class="s" d="M70 30V12m0 0h12m-12 7h8m-8 7h10"/>
-            <path class="f" d="M14 30l10-10 10 10v10H14z"/>
+            <path class="fi" d="M14 30l10-10 10 10v10H14z"/>
             <text x="12" y="86" class="t">KIRKUK · BAGHDAD</text>
           </svg>
         </div>
         <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 08 · MIDDLE EAST · WW</span><span class="tag">OFFICIAL</span></div>
+          <div class="cardmeta"><span class="cardnum">STORY 06 · MIDDLE EAST · WW</span><span class="tag">OFFICIAL</span></div>
           <h3>BAGHDAD MOVES ON THE NORTH</h3>
           <p>Baghdad ordered control of Kurdish border crossings and northern oil fields; the KRG objected.</p>
         </div>
@@ -377,6 +352,8 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
       <article class="card">
         <div class="cardillus">
           <svg viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="0" y="80" width="96" height="16" class="fb"/>
+            <rect x="14" y="58" width="68" height="12" class="fi"/>
             <path class="f" d="M40 16l10-9 9 12 12-7 4 15-9 9-16-3-11-9z"/>
             <path class="s" d="M49 30l3-8m0 0l-4 3m4-3l3 4"/>
             <path class="s" d="M14 58h68v10H14zM14 58l8-14h20l6 14m10 0l5-10h13l4 10"/>
@@ -386,7 +363,7 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
           </svg>
         </div>
         <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 09 · AMERICAS · WW</span><span class="tag confirmed">CONFIRMED</span></div>
+          <div class="cardmeta"><span class="cardnum">STORY 07 · AMERICAS · WW</span><span class="tag confirmed">CONFIRMED</span></div>
           <h3>25 HURT AS A CAR BOMBS A CITY</h3>
           <p>A car bomb in Villavicencio injured 25 and damaged 80+ buildings, blamed on FARC dissidents.</p>
         </div>
@@ -395,18 +372,20 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
       <article class="card">
         <div class="cardillus">
           <svg viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="0" y="82" width="96" height="14" class="fb"/>
             <path class="s" d="M8 74h80M8 82h80"/>
             <path class="s" d="M12 74V46l12-10 12 10v28"/>
             <path class="s" d="M36 74V52l10-8 10 8v22"/>
             <path class="s" d="M56 74V34l10-8 10 8v40"/>
             <path class="s" d="M74 27V10h8v17"/>
             <path class="s2" d="M78 8c-6-5-10-2-8 3 2 4 8 4 10 0 3-6-3-10-8-7"/>
+            <rect x="10" y="70" width="76" height="5" class="fi"/>
             <path class="fa" d="M22 68c2-7 6-10 10-6 3 3 1 8-3 10-3 2-7 0-7-4z"/>
             <path class="s" d="M18 58l6 3m-2-8l5 4"/>
           </svg>
         </div>
         <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 10 · ASIA · The Star</span><span class="tag ongoing">ONGOING</span></div>
+          <div class="cardmeta"><span class="cardnum">STORY 08 · ASIA · The Star</span><span class="tag ongoing">ONGOING</span></div>
           <h3>26 DEAD IN A CANDY FACTORY</h3>
           <p>The Banten fire toll rose to 26 with about 32 workers missing; police opened a criminal probe.</p>
         </div>
@@ -415,12 +394,14 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
       <article class="card">
         <div class="cardillus">
           <svg viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="0" y="80" width="96" height="16" class="fb"/>
             <path class="s" d="M8 60h80M8 68h80"/>
             <path class="s" d="M14 60l14-22h26l8 22"/>
             <path class="s" d="M30 38v-12h8v12"/>
             <path class="s" d="M44 60l-6-18 8 4 4 14"/>
             <circle cx="58" cy="44" r="5" class="s"/>
             <path class="s" d="M58 49v9"/>
+            <rect x="12" y="74" width="72" height="5" class="fi"/>
             <g class="s">
               <path d="M16 82v-10m0 0l-4 6m4-6l4 6"/>
               <path d="M34 82v-10m0 0l-4 6m4-6l4 6"/>
@@ -430,7 +411,7 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
           </svg>
         </div>
         <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 11 · ASIA · Xinhua</span><span class="tag">REPORTED</span></div>
+          <div class="cardmeta"><span class="cardnum">STORY 09 · ASIA · Xinhua</span><span class="tag">REPORTED</span></div>
           <h3>GARMENT WORKERS BLOCK THE ROADS</h3>
           <p>Garment workers blocked roads for higher pay; police used tear gas as factories halted.</p>
         </div>
@@ -439,7 +420,9 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
       <article class="card">
         <div class="cardillus">
           <svg viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="0" y="82" width="96" height="14" class="fb"/>
             <path class="s" d="M6 82h84M12 76h72"/>
+            <rect x="12" y="72" width="72" height="5" class="fi"/>
             <path class="s" d="M18 76l8-16h44l6 16z"/>
             <path class="s" d="M28 60l4-16m6 16l3-14m7 14l2-12"/>
             <circle cx="34" cy="38" r="4" class="fa"/><circle cx="46" cy="34" r="5" class="fa"/><circle cx="58" cy="39" r="3.5" class="fa"/>
@@ -448,7 +431,7 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
           </svg>
         </div>
         <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 12 · AFRICA · WW</span><span class="tag">OFFICIAL</span></div>
+          <div class="cardmeta"><span class="cardnum">STORY 10 · AFRICA · WW</span><span class="tag">OFFICIAL</span></div>
           <h3>COBALT EXPORTS CUT OFF</h3>
           <p>DR Congo suspended cobalt exports from 30 November; Chinese firms are racing to ship.</p>
         </div>
@@ -457,28 +440,10 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
       <article class="card">
         <div class="cardillus">
           <svg viewBox="0 0 96 96" aria-hidden="true">
-            <rect x="14" y="44" width="34" height="30" class="s"/>
-            <path class="s" d="M14 54h34M25 44v-8h12v8"/>
-            <path class="s" d="M42 44l10-8h20v8z"/>
-            <path class="s" d="M28 54v14m8-14v14"/>
-            <path class="s" d="M58 36l6-10 6 10z"/>
-            <path class="s2" d="M30 30c2-4 6-4 8 0m6 0c2-4 6-4 8 0"/>
-            <path class="s" d="M72 18c-8-2-12 4-8 8s12 0 10-6"/>
-            <circle cx="70" cy="62" r="5" class="s"/><path class="s" d="M70 57v-4m0 14v4m-5-9h-4m14 0h4"/>
-          </svg>
-        </div>
-        <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 13 · AFRICA · WW</span><span class="tag">REPORTED</span></div>
-          <h3>FOUR KILLED IN DELTA STATE</h3>
-          <p>Four were killed in an attack on Ovie Omo-Agege's campaign in Delta State; a curfew followed.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="cardillus">
-          <svg viewBox="0 0 96 96" aria-hidden="true">
-            <path class="s" d="M8 66c8-7 17-4 21 3-5-2-10 0-13 5 7-2 12 0 15 5H8z"/>
-            <path class="s" d="M60 62c7-5 14-3 17 2-4-1-8 0-10 4 5-2 9 0 12 4H60z"/>
+            <rect x="0" y="72" width="96" height="24" class="fb"/>
+            <path class="fi" d="M8 66c8-7 17-4 21 3-5-2-10 0-13 5 7-2 12 0 15 5H8z"/>
+            <path class="fi" d="M60 62c7-5 14-3 17 2-4-1-8 0-10 4 5-2 9 0 12 4H60z"/>
+            <path class="fr" d="M40 64h16l-3 7H43z"/>
             <path class="s" d="M40 64h16l-3 7H43zM46 64v-7h4v7"/>
             <path class="s2" stroke-dasharray="3 3" d="M30 56c10-10 20-11 28-7"/>
             <path class="s" d="M58 48l8-3-2 8"/>
@@ -488,7 +453,7 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
           </svg>
         </div>
         <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 14 · OCEANIA · ABC</span><span class="tag">REPORTED</span></div>
+          <div class="cardmeta"><span class="cardnum">STORY 11 · OCEANIA · ABC</span><span class="tag">REPORTED</span></div>
           <h3>HONIARA TURNS TO CANBERRA</h3>
           <p>Solomon Islands will not renew its China security agreement and is turning to Australia.</p>
         </div>
@@ -497,15 +462,18 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
       <article class="card">
         <div class="cardillus">
           <svg viewBox="0 0 96 96" aria-hidden="true">
+            <rect x="0" y="78" width="96" height="18" class="fb"/>
+            <rect x="16" y="74" width="64" height="8" class="fi"/>
             <path class="s" d="M10 74h76M16 74V38h64v36M10 38l38-22 38 22"/>
             <path class="s" d="M24 74V48m12 26V48m12 26V48m12 26V48m12 26V48"/>
             <path class="s" d="M8 80h80"/>
+            <path class="fr" d="M58 20l12-8 4 6-12 8z"/>
             <path class="s" d="M58 20l12-8 4 6-12 8zM56 24l8 6"/>
             <path class="s2" d="M22 34h10m6 0h10m6 0h10"/>
           </svg>
         </div>
         <div class="cardbody">
-          <div class="cardmeta"><span class="cardnum">STORY 15 · WORLD · theworld</span><span class="tag confirmed">CONFIRMED</span></div>
+          <div class="cardmeta"><span class="cardnum">STORY 12 · WORLD · theworld</span><span class="tag confirmed">CONFIRMED</span></div>
           <h3>A GENOCIDE VERDICT, A FIRST</h3>
           <p>The ICJ ruled for the first time that a state — Myanmar — committed genocide against the Rohingya.</p>
         </div>
@@ -516,32 +484,32 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
 
   <!-- ================= BRIEFS ================= -->
   <section class="briefs">
-    <div class="section-head"><span>The world in brief</span><span>24 one-line reports · stories 16–39</span></div>
+    <div class="section-head"><span>The world in brief</span><span>24 one-line reports · stories 13–36</span></div>
     <div class="brief-grid">
-      <div class="brief"><span class="bn">16</span><span>Germany: bomb threats hit hundreds of schools; Freiburg and Hamburg evacuated. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">17</span><span>France: top court upheld Éric Zemmour's conviction over Pétain remarks. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">18</span><span>EU: Commission proposed a new Russia sanctions round on finance and energy. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">19</span><span>England: 5,258 heat-linked deaths in summer 2026, a record. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">20</span><span>Iran: the rial fell to 283,200 to the dollar; gold coin rose 3%. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">21</span><span>Iran: truckers' strike hit 15 cities; prisoners in 67 jails joined a hunger strike. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">22</span><span>Gaza: strikes killed seven, including a senior Hamas security official. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">23</span><span>US: Rep. Jimmy Gomez resigned after a House panel found misconduct proof. <em>theworld</em></span></div>
-      <div class="brief"><span class="bn">24</span><span>US: Pentagon talks with GM and Ford on mass-producing military drones. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">25</span><span>Brazil: lower house passed Lula's fiscal plan; the real gained 1.3%. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">26</span><span>Mexico: inflation 3.96%; 16 cartel suspects killed in a Sinaloa clash. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">27</span><span>Cuba: students held armed drills after Trump floated an intervention. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">28</span><span>Vietnam: Hanoi hot-pot gas explosion killed six and hurt more than a dozen. <em>Xinhua</em></span></div>
-      <div class="brief"><span class="bn">29</span><span>Taiwan: 19,576,028 voters eligible for the 28 November local elections. <em>Xinhua</em></span></div>
-      <div class="brief"><span class="bn">30</span><span>Philippines: Basco airport, under 200 km from Taiwan, will be upgraded. <em>The Star</em></span></div>
-      <div class="brief"><span class="bn">31</span><span>India: a truck rammed a school bus in Uttar Pradesh; four children killed. <em>Xinhua</em></span></div>
-      <div class="brief"><span class="bn">32</span><span>Pakistan: JUI-F's Fazlur Rehman placed under house arrest in Lahore. <em>Xinhua</em></span></div>
-      <div class="brief"><span class="bn">33</span><span>Malaysia: 6,500 Myanmar migrants to be repatriated; laureate A. Samad Said dies at 91. <em>The Star</em></span></div>
-      <div class="brief"><span class="bn">34</span><span>Nigeria: central bank held the policy rate at 23%. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">35</span><span>Ethiopia offered to host Sudan peace talks; UN condemned Khartoum drone strikes. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">36</span><span>Madagascar: National Assembly voted to oust its president. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">37</span><span>South Africa: no B-BBEE swap for US tariff relief, says the trade minister. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">38</span><span>Australia–Singapore: a pact to secure essential food and medicine. <em>WW</em></span></div>
-      <div class="brief"><span class="bn">39</span><span>COP31: UN climate talks in Türkiye ended without a major agreement. <em>theworld</em></span></div>
+      <div class="brief"><span class="bn">13</span><span>Germany: bomb threats hit hundreds of schools; Freiburg and Hamburg evacuated. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">14</span><span>France: top court upheld Éric Zemmour's conviction over Pétain remarks. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">15</span><span>EU: Commission proposed a new Russia sanctions round on finance and energy. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">16</span><span>England: 5,258 heat-linked deaths in summer 2026, a record. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">17</span><span>Iran: the rial fell to 283,200 to the dollar; gold coin rose 3%. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">18</span><span>Iran: truckers' strike hit 15 cities; prisoners in 67 jails joined a hunger strike. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">19</span><span>Gaza: strikes killed seven, including a senior Hamas security official. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">20</span><span>US: Rep. Jimmy Gomez resigned after a House panel found misconduct proof. <em>theworld</em></span></div>
+      <div class="brief"><span class="bn">21</span><span>US: Pentagon talks with GM and Ford on mass-producing military drones. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">22</span><span>Brazil: lower house passed Lula's fiscal plan; the real gained 1.3%. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">23</span><span>Mexico: inflation 3.96%; 16 cartel suspects killed in a Sinaloa clash. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">24</span><span>Cuba: students held armed drills after Trump floated an intervention. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">25</span><span>Vietnam: Hanoi hot-pot gas explosion killed six and hurt more than a dozen. <em>Xinhua</em></span></div>
+      <div class="brief"><span class="bn">26</span><span>Taiwan: 19,576,028 voters eligible for the 28 November local elections. <em>Xinhua</em></span></div>
+      <div class="brief"><span class="bn">27</span><span>Philippines: Basco airport, under 200 km from Taiwan, will be upgraded. <em>The Star</em></span></div>
+      <div class="brief"><span class="bn">28</span><span>India: a truck rammed a school bus in Uttar Pradesh; four children killed. <em>Xinhua</em></span></div>
+      <div class="brief"><span class="bn">29</span><span>Pakistan: JUI-F's Fazlur Rehman placed under house arrest in Lahore. <em>Xinhua</em></span></div>
+      <div class="brief"><span class="bn">30</span><span>Malaysia: 6,500 Myanmar migrants to be repatriated; laureate A. Samad Said dies at 91. <em>The Star</em></span></div>
+      <div class="brief"><span class="bn">31</span><span>Nigeria: central bank held the policy rate at 23%. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">32</span><span>Ethiopia offered to host Sudan peace talks; UN condemned Khartoum drone strikes. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">33</span><span>Madagascar: National Assembly voted to oust its president. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">34</span><span>South Africa: no B-BBEE swap for US tariff relief, says the trade minister. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">35</span><span>Australia–Singapore: a pact to secure essential food and medicine. <em>WW</em></span></div>
+      <div class="brief"><span class="bn">36</span><span>COP31: UN climate talks in Türkiye ended without a major agreement. <em>theworld</em></span></div>
     </div>
   </section>
 
@@ -553,7 +521,7 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
 
   <footer>
     <span>THE GLOBAL DAY · compiled 17:15 UTC · WW = worldwatch.media regional briefings · Xinhua Daily World Briefing · The Star ASEAN · theworld.fyi</span>
-    <span>39 STORIES / 7 REGIONS · PAGE 1</span>
+    <span>36 STORIES / 7 REGIONS · PAGE 1</span>
   </footer>
 
 </div>
@@ -595,7 +563,7 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
       var lon = (x / W) * 360 - 180;
       var lat = 83 - (y / H) * 143;
       for (var p = 0; p < land.length; p++) {
-        if (inPoly(lon, lat, land[p])) { parts.push('<circle class="dot" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="1.15"/>'); break; }
+        if (inPoly(lon, lat, land[p])) { parts.push('<circle class="dot" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="1.45"/>'); break; }
       }
     }
   }
@@ -605,12 +573,12 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
   // [story number, longitude, latitude, dx, dy]
   var pins = [
     [1,-74,40.7,0,0],[2,20.1,32.1,0,0],[3,56.3,26.6,8,-2],
-    [4,-2.2,53.5,-7,-3],[6,-52.8,5.2,0,0],[7,50.9,34.6,10,4],
-    [8,44.4,33.3,-9,1],[9,-73.6,4.1,0,0],[10,106.1,-6.1,0,0],
-    [11,90.4,23.8,0,-6],[12,15.3,-4.3,0,0],[13,5.9,5.5,0,8],
-    [14,159.9,-9.4,0,0],[15,96,21,2,-9],[16,13.4,52.5,-6,9],
-    [28,105.8,21,8,9],[29,121.5,25,0,0],[31,80.9,26.8,-2,-8],
-    [34,7.5,9.1,0,-8],[36,47.5,-18.9,0,0],[38,151.2,-33.9,0,0],[39,32.9,39.9,0,0]
+    [4,-2.2,53.5,-7,-3],[5,50.9,34.6,10,4],[6,44.4,33.3,-9,1],
+    [7,-73.6,4.1,0,0],[8,106.1,-6.1,0,0],[9,90.4,23.8,0,-6],
+    [10,15.3,-4.3,0,0],[11,159.9,-9.4,0,0],[12,96,21,2,-9],
+    [13,13.4,52.5,-6,9],[25,105.8,21,8,9],[26,121.5,25,0,0],
+    [28,80.9,26.8,-2,-8],[31,7.5,9.1,0,-8],[33,47.5,-18.9,0,0],
+    [35,151.2,-33.9,0,0],[36,32.9,39.9,0,0]
   ];
 
   var pg = document.createElementNS(NS, 'g');
@@ -620,7 +588,7 @@ svg .ta{font-family:Arial,sans-serif;font-weight:700;font-size:7px;fill:var(--ac
     var g = document.createElementNS(NS, 'g');
     g.setAttribute('class', 'pin' + (p[0] > 9 ? ' two' : ''));
     g.setAttribute('transform', 'translate(' + cx.toFixed(1) + ',' + cy.toFixed(1) + ')');
-    g.innerHTML = '<circle r="7.1"/><text>' + p[0] + '</text>';
+    g.innerHTML = '<circle r="7.8"/><text>' + p[0] + '</text>';
     pg.appendChild(g);
   });
   svg.appendChild(pg);
