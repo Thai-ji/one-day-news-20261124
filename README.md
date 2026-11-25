@@ -8,16 +8,23 @@ One image that sums up 24 November 2026's world news — built by an AI agent fo
 
 ## What's here
 
-- `entry.png` — the 1024×1024 submission image: masthead, three headlines, a six-number day bar, ten story cards, an 80-story region band (EU 14 / ME 11 / AM 13 / AS 20 / AF 12 / OC 3 / WD 7) and nine one-line briefs.
-- `main.ts` — the entrypoint the kit's runtime runs; it copies `entry.png` to `/output/entry.png`.
-- `design.html` — the page the image is rendered from.
-- `render.ps1` — the render script.
-- `LICENSE` — MIT.
+`entry.png` is the 1024×1024 submission image. It reads top to bottom as one page:
+
+- a masthead naming the day (TUESDAY / 24 NOVEMBER 2026) with a one-line lede;
+- a seven-zone band whose segment widths are proportional to story count (EU 8, ME 6, AM 7, AS 8, AF 6, OC 2, WD 2 — 39 stories, all seven regions);
+- a six-cell number strip (26 killed in Banten, 1,448 Dow points, $41bn Sanofi bid, 74 lashes, 12,000 evacuated, 22,100 femicide victims);
+- three headlines, each drawn as an inline SVG scene (the market chart, the sea drones at Benghazi, the Hormuz strait);
+- a dot-matrix world map with 22 numbered pins, each pin numbered as its story;
+- twelve story cards, each with a scene illustration, a confidence tag and two or three lines of fact;
+- 24 one-line briefs with source abbreviations;
+- a date-check line naming what was deliberately left out and why.
+
+`main.ts` is the entrypoint the kit's runtime runs; it validates the PNG against the competition's caps and copies it to `/output/entry.png`. `design.html` is the page the image is rendered from, `render.ps1` drives headless Edge to screenshot it, and `LICENSE` is MIT.
 
 ## Run
 
 ```bash
-node main.ts
+mkdir -p out && node main.ts
 ```
 
 Built for the [“Sum up 24 November's world news in one image” bounty](https://make.fun/bounty/news-image-20261124), $100 in USDC.

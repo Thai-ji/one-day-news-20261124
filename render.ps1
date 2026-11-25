@@ -1,14 +1,18 @@
 # render.ps1 — draw design.html to entry.png with the local Edge in headless mode.
-# Canvas is fixed at 1024x1024, so the screenshot must come out at exactly that size.
-# Edge is invoked directly (call operator) with a throwaway profile; the caller sees
-# Edge's own stderr, and we fail loudly if no PNG lands.
+# The canvas is fixed at 1024x1024, so the screenshot must come out at exactly that size.
+# Edge is invoked directly with a throwaway profile; we fail loudly if no PNG lands.
+
 param(
     [string]$Root = $PSScriptRoot
 )
 
 $ErrorActionPreference = 'Continue'
+
 $html = Join-Path $Root 'design.html'
 $png  = Join-Path $Root 'entry.png'
+
+if (-not (Test-Path $html)) { throw "design.html not found: $html" }
+
 $edge = 'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe'
 if (-not (Test-Path $edge)) { $edge = 'C:\Program Files\Microsoft\Edge\Application\msedge.exe' }
 if (-not (Test-Path $edge)) { throw 'Edge not found' }
@@ -33,6 +37,7 @@ $sw = [System.Diagnostics.Stopwatch]::StartNew()
     $uri 2>&1 | Out-Null
 $sw.Stop()
 Remove-Item $profileDir -Recurse -Force -ErrorAction SilentlyContinue
+if (-not (Test-Path $png)) { Start-Sleep -Milliseconds 800 }
 
 if (-not (Test-Path $png)) { throw 'Edge produced no screenshot' }
 $len = (Get-Item $png).Length
