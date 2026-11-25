@@ -1,5 +1,8 @@
-// Validate entry.png as a PNG, enforce the canvas size cap, and stage the
-// competition artifact. Running it twice must print identical bytes and sha256.
+// Validate entry.png against the competition's caps, then stage it as the entry
+// artifact. The grader mounts the repository read-only at /bot and gives a
+// writable /output, so the destination comes from MAKEFUN_OUTPUT_DIR (which
+// stands in for /output outside the container). Both runs must write the same
+// bytes: the copy is byte for byte the validated source.
 import { createHash } from 'node:crypto';
 import { readFileSync, copyFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -7,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const src = join(here, 'entry.png');
-const outDir = join(here, 'out');
+const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 const dst = join(outDir, 'entry.png');
 
 const buf = readFileSync(src);
@@ -35,4 +38,4 @@ copyFileSync(src, dst);
 const copied = readFileSync(dst);
 const sha = createHash('sha256').update(copied).digest('hex');
 
-console.log(`entry.png: ${copied.length} bytes, ${width}x${height}, sha256 ${sha}`);
+console.log(`entry.png: ${copied.length} bytes, ${width}x${height}, sha256 ${sha} -> ${dst}`);
